@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.0em;
+  /* font-size: 15px; */
+  font-weight: 300;
+}
+
+html {
+  width: 100vw;
+  height: auto;
+  /* min-height:100vh; */
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #FAFAFA
+}
+
+body {
+  width: 75vw;
+
+  position: relative;
+  overflow-x: hidden;
+  font-family: "Butler", "Georgia", "Times New Roman", "Helvetica", sans-serif;
+
+  padding: 7%;
+
+  margin: 0 auto;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #FFFFFF
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: disc; /* Removes the default bullets */
+}
+
+ul li {
+  padding-left: 0.1em;
+  /* padding-left: 2em; */
+  padding-bottom: 0.3em;
+}
+
+/* To reduce spacing between a bullet point and a text */
+li:before {
+    content: "";
+    margin-left: -0.25em;
+}
+
+a {
+  transition: color 0.25s;
+  transition-timing-function: ease-in-out;
+  text-decoration: none;
+  position: relative;
+  display: inline-block; /* Ensures the underline aligns correctly */
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0px;
+  left: 50%;
+  background-color: #1e50ff;
+  /* background-color: #007AFF; */
+  transition: width 0.5s ease-in-out, left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+a:hover::after {
+  width: 100%;
+  opacity: 1;
+  left: 0;
+}
+
+.link {color: gray;}
+.link:hover {
+  color: #1e50ff;
+  /* color: #007AFF; */
+}
+
+img {border: 0;}
+
+.heading {
+  font-family: "Butler", "Georgia", "Times New Roman", "Helvetica", sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+
+  margin-top: 1.5em;
+}
+
+.paper {
+  margin-top: 5px;
+  margin-left: 0.1em;
+  padding-left: 0.2cm;
+  border-left: solid gray 2.5px;
+  transition: border-color 0.5s ease; /* Add this line */
+}
+
+.paper:hover {
+  border-left: solid black 2.5px;
+}
+
+.paper_title {
+  font-size:1em;
+}
+
+.authors {
+  font-size: 0.9em;
+}
+
+.venue {
+  font-size: 0.9em;
+}
+
+.feature {
+  color: #ba0907
+  /* color:#880e30 */
+}
+
+#horizontalLine {
+  width: 75vw; /*80vw;*/ /* 1080px; */
+  margin: 0 auto;
+
+  position: relative;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.7em;
+
+  border-bottom: 1px solid #e0e0e0;
+}
+
+::selection {
+    background: #282828; /* Highlight color */
+    color: white; /* Text color */
+}
+
+.tight-sup {
+    vertical-align: super;
+    line-height: 0.8375em; /* Reduces the impact on line spacing */
+    font-size: smaller; /* Adjust size as needed */
+}
+
+/* Setting Butler typeface */
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler-UltraLight.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler-Medium.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler-Light.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler-Black.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler-Bold.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler-ExtraBold.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('typefaces/Butler/Butler_Webfont/Butler.woff2') format('woff2'),
+        url('typefaces/Butler/Butler_Webfont/Butler.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
